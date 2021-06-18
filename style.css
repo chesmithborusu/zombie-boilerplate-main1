@@ -1,295 +1,123 @@
-/* removing preset styling */
-* {
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@500;700;701&family=Luckiest+Guy&display=swap');
+
+
+body {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    }
-    
-    /* Styling body */
-    body {
-    font-family: 'Poppins', sans-serif;
-    padding: 0 116px;
-    }
-    
-    .flex {
+    font-family: 'Bitter', serif;
+    overflow: hidden;
+}
+
+.home {
+    background-image: url("./assets/zombie-shoot-background.png");
+    height: 100vh;
+    width: 100vw;
     display: flex;
-    }
-    
-    .space-evenly {
-    justify-content: space-evenly;
-    }
-    
-    .space-between {
-    justify-content: space-between;
-    }
-    
-    .align-center {
-    align-items: center;
-    }
-    
-    .direction-column {
     flex-direction: column;
-    }
-    
-    .wrap {
-    flex-wrap: wrap;
-    }
-    
-    /* Styling navbar */
-    nav {
-    height: 180px;
-    width: 70%;
-    }
-    
-    nav>a {
-    color: black;
-    font-weight: 500;
-    text-decoration: none;
-    }
-    
-    nav>a:hover {
-    color: #A3CB38;
-    font-weight: bold;
-    }
-    
-    /* Styling Header section */
-    header {
-    min-height: 620px;
-    flex-wrap: wrap-reverse;
-    }
-    
-    .header-text {
-    padding-top: 5%;
-    padding-bottom: 5%;
-    width: 536px;
-    }
-    
-    header img {
-    size: 100%;
-    }
-    
-    .bg-green {
-    position: absolute;
-    width: 446px;
-    height: 629px;
-    left: 948px;
-    top: 0px;
-    right: 492px;
-    background: #A3CB38;
-    border-radius: 0px 0px 100px 0px;
-    z-index: -1;
-    }
-    
-    h2 {
-    font-size: 54px;
-    }
-    
-    .button {
-    height: 50px;
-    width: 150px;
-    border-radius: 4px;
-    background-color: #A3CB38;
-    margin-top: 32px;
-    }
-    
-    .button p {
+    justify-content: space-around;
+    align-items: center;
+}
+
+.game {
+    background-image: url("./assets/zombie-shoot-game-background.png");
+    background-size: 100% 100%;
+    cursor: url('https://img.informer.com/icons/png/32/113/113532.png') 16 16, crosshair;
+    height: 100vh;
+    width: 100vw;
+}
+
+.flex-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo {
+    width: 50vw;
+    min-width: 300px;
+}
+
+#button {
+    max-width: 220px;
+    height: 60px;
+    width: 40vw;
+    padding: 5px;
+    background-color: #7FD443;
+    border: 1px 0.9 black;
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 50px;
+    font-size: 26px;
+    font-family: 'Luckiest Guy', cursive;
+    letter-spacing: 3px;
     color: white;
-    text-align: center;
-    line-height: 50px;
-    font-size: 16px;
-    font-weight: bold;
-    }
-    
-    /* Styling main hustle */
-    .my-main-hustle {
+    cursor: pointer;
+}
+
+#button:hover {
+    background-color: rgb(102, 6, 22);
+}
+
+#max-lives {
+    width: 100%;
+    height: 25px;
+    border-radius: 17px;
+    background-color: limegreen;
+    position: fixed;
+    bottom: 35px;
+    margin: 0 auto;
+}
+
+#lives {
+    z-index: 2;
+    width: 50%;
+    height: 25px;
+    border-radius: 17px;
+}
+
+#timer-box {
+    font-size: 2em;
+    padding: 20px;
+    z-index: 1;
     position: absolute;
-    background-image: url(./assets/bg.png);
-    background-repeat: no-repeat;
-    min-height: 550px;
-    width: 636px;
-    z-index: -1;
-    left: 0;
-    }
-    
-    .my-main-hustle-text {
-    margin-top: 1%;
-    max-width: 555px;
-    margin-left: 200px;
-    }
-    
-    .my-main-hustle-container>h1 {
-    max-width: 653px;
-    }
-    
-    h3 {
-    color: #A3CB38;
-    font-size: 30px;
-    font-weight: bold;
-    }
-    
-    h4 {
-    font-size: 18px;
-    }
-    
-    h1 {
-    font-size: 100px;
-    line-height: 100px;
-    }
-
-    /*styling my work section*/
-
-    .my-work{
-        min-height: 1045px;
-        flex-direction: column;
-    }
-
-    .my-work>h2{
-        text-align: center;
-    }
-
-    .my-work>p{
-        max-width: 700px;
-        text-align: center;
-    }
-
-    .my-work-container{
-        width: 100vw;
-    }
-
-    .my-work-card{
-        align-items: flex-start;
-        max-width: 224px;
-        min-height: 323px;
-    }
-
-    h5{
-        font-size: 14px;
-    }
-
-    .my-work-card>h3{
-         font-size: 16px;
-    }
-
-    .card-green{
-        position: relative;
-        top: 40px;
-        left: 10px;
-        height: 45px;
-        width: 30px;
-        background-color: #A3CB38;
-        z-index: +1;
-    }
-
-    .hr{
-        height: 4px;
-        width: 30px;
-        background-color: #A3CB38;
-    }
-
-    /*styling the I'm proud of section*/
-
-.proud-overall-container{
-    min-height: 593px;
+    right: 50px;
 }
 
-.proud-container{
-    max-width: 492px;
-    min-height: 424px;
-    background-color: #A3CB38;
-}
-
-.proud-text{
-    max-width: 272px;
-    margin-right: 70px;
-}
-
-.proud-text-container{
-    min-height: 424px;
-    max-width: 958px;
-    flex-wrap: wrap;
-    align-items: space-evenly;
-}
-
-#last-proud-text{
-    justify-self: flex-start;
-}
-
-.proud-container{
+.zombie-image {
     position: absolute;
-    right: 0;
+    bottom: -100px;
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: flying 5s infinite ease-in;
+    z-index: 2;
+    width: 30vw;
+    height: 30vw;
+    max-width: 150px;
+    max-height: 150px;
 }
 
-.proud-container>h1{
-    margin-top: 60px;
-    margin-left: 60px;
-    margin-right: 136px;
+h2 {
+    font-size: 36px;
     color: white;
 }
 
-/*styling the hobbies section*/
-
-.my-hustle-overall-container{
-    min-height: 950px;
-    flex-wrap: wrap;
+.win-bg,
+.gameover-bg {
+    background-image: url(./assets/zombie-shoot-background.png);
+    background-size: 100% 100%;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.my-hustle-text-container{
-    max-width: 376px;
-}
+@keyframes flying {
+    0% {
+        bottom: -100px;
+    }
 
-.my-hustle-text-container>h1{
-    color: #A3CB38;
+    100% {
+        bottom: 1080px;
+    }
 }
-
-.my-hustle-text-container>p{
-    margin-top: 32px;
-}
-
-.hustle-image-container1{
-     align-items: flex-end;
-     flex-wrap: wrap;
-}
-
-.my-hustle-image-container,
-.hustle-image-container2{
-    flex-wrap: wrap;
-}
-/* Styling footer section */
-footer {
-    justify-content: flex-end;
-    align-items: flex-end;
-    height: 273px;
-    }
-    
-    footer p {
-    text-align: right;
-    padding-bottom: 64px;
-    }
-    
-    .contact-container {
-    position: absolute;
-    left: 0;
-    height: 273px;
-    max-width: 596px;
-    background-color: #A3CB38;
-    }
-    
-    .contact-container>h2,
-    .contact-container>a {
-    padding-left: 116px;
-    padding-top: 60px;
-    color: white;
-    margin-right: 282px;
-    }
-    
-    .social-media-container {
-    width: 103px;
-    height: 20px;
-    margin-top: 10px;
-    margin-left: 116px;
-    }
-    
-    .social-media-container>img {
-    width: 20px;
-    }
-    
